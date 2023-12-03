@@ -1,0 +1,33 @@
+<p>eventbinding2 works!</p>
+<input #num1 type="text" placeholder="Enter the Number1"><br><br>
+<input #num2 type="text" placeholder="Enter the Number2"><br><br>
+<button (click)="onAddition(num1.value,num2.value)" >Addition</button><br><br>
+<input [value]="result" type="text" placeholder="Result"><br><br>
+
+<!-- change event -->
+
+<input type="text" placeholder="Enter the Username" (change)="onChange()" ><br><br>
+
+<!-- keyboard event 
+    1 keyup
+    2 keydown
+-->
+
+<input (keyup)="onKeyUp()" type="text" placeholder="key up event "><br><br>
+
+<input (keydown)="onKeyDown()" type="text" placeholder="key down event "><br><br>
+<hr>
+
+<button (click)="res1=8+8" >Addition </button>{{res1}}
+
+<!-- two way data binding
+    [(ngModel)]="property"
+    - FormsModule 
+    app.module.ts => import 
+-->
+<br><br>
+<input type="text" [(ngModel)]="name" >{{name}}
+
+
+
+

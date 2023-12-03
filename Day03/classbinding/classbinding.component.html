@@ -1,0 +1,21 @@
+<p>classbinding works!</p>
+<!-- syntx
+    [class]="propertyname"
+-->
+
+<h2 [class]="myclass" >Apply Class Binding </h2>
+
+<h2 [class.danger]="rating<4"
+    [class.warning]="rating>4"   
+>Apply class Binding On Condition </h2>
+
+<!-- ngClass 
+    - To apply multiple css classes to html element dynamically 
+    - it is attribute directive
+    - to apply any html 
+    - to apply it req. json Obj
+    [ngClass]="jsonObj"
+-->
+<div [ngClass]="jsonObj" >
+    Apply ngClass Binding to div 
+</div>

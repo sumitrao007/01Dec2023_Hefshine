@@ -1,0 +1,34 @@
+<p>eventbinding1 works!</p>
+<!-- data flow from view to component
+    (eventname)="eventhandler"
+
+-->
+
+<button (click)="onClick()" >Click</button><br><br>
+<img id="myimg" title="Click it " src="../../assets/bg4.jpg" alt="" (click)="onImage()" >
+<br><br>
+
+<!-- $event 
+    - it is special variable 
+    - it gives current DOM Element information    
+    - u can access only data, u can not manipulate data  
+-->
+
+<button value="Doller Event..." (click)="onDollerClick($event)" >Doller Event </button>
+<hr>
+<!-- template ref. variable 
+    - it also gives dom element info.
+    - it holds the handle/object of particular element
+    - #uniquename
+    - any html ytag tag 
+    - u can access as well as change the data and behaviour 
+-->
+<input #inputname type="text" placeholder="Enter the name "><br><br>
+<button (click)="onSend(inputname)" >send</button>
+<br><br>
+
+<input #inputname1 type="text" placeholder="Enter the name "><br><br>
+<button (click)="onSend1(inputname1.value)" >send</button>
+
+
+
