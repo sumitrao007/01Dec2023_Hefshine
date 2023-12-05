@@ -1,0 +1,39 @@
+<p>post works!</p>
+
+<div>
+    <input #inputname type="text" placeholder="Enter the Name"> <br><br>
+    <input #inputphoneno type="number" placeholder="Enter the Phone No"><br><br>
+    <button (click)="onSend(inputname.value,inputphoneno.value)">Send</button>
+</div>
+<br><br>
+
+<div [hidden]="isHidden">
+
+        <label for=""> ID:: </label>
+        <input [(ngModel)]="myid" type="text" placeholder="Enter the ID" readonly><br><br>
+        <label for=""> Name:: </label>
+        <input [(ngModel)]="myname" type="text" placeholder="Enter the Name"><br><br>
+        <label for=""> Phone No:: </label>
+        <input [(ngModel)]="myphoneNo" type="text" placeholder="Enter the Phone No"><br><br>
+        <button (click)="onUpdate()" >Update</button>
+
+</div>
+
+<hr>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name </th>
+        <th>Phone No</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of studData" >
+            <td> {{item.id}} </td>
+            <td> {{item.name}} </td>
+            <td> {{item.phoneno}} </td>
+            <td><button (click)="onEdit(item)" >Edit</button>
+            <button (click)="onDelete(item.id)" >Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
