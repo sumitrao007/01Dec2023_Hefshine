@@ -1,0 +1,86 @@
+
+data binding
+- data flow from component(.ts) to view(.html) file 
+1 string interpolation
+	{{propertyname}}
+2 property binding 
+	[atrributename]="propertyname"
+3 style binding
+	[style.csspropertyname]="property"
+	[style.csspropertyname]="condition"
+	[ngStyle]="jsonObj"
+	.ts file 
+	jsonObj={
+		color:'..',
+		fontFamily:'...',
+		'font-size':...
+	}
+4 class binding 
+	[class]="property"
+	[class.cssClassname]="condition"
+	[ngClass]="jsonObj"
+	.ts 
+	isError:boolean=true;
+	isSpecial:boolean=true;
+	jsonObj={
+		'suucess':!this.isError,
+		'danger':this.isError,
+		'special':this.isSpecial
+	}
+
+
+
+
+5 two way data binding
+
+D=Document o = > Object m=Modal 
+document => html element => create OBject => data 
+
+structure directive
+	1 *ngIf => on the basis of condition 
+	2 *ngFor => dynamically iteration perform 
+	3 *ngSwitch => specif case should be execute 
+	
+custom pipe 
+@Pipe 
+- It is class Level decorator 
+- PipeTransform  => Interface
+- transform 
+ng g p pipename
+
+Http Method
+1 get => to get/fetch data from backend server 
+2 post => to send data from frontend server to backend server 
+3 put => to update a particular data 
+4 delete  => to delete a particular data 
+
+
+http://localhost:8080/apiname
+HttpClientModule=> app.module.ts => import 
+HttpClient =>  service  
+
+service 
+- it is simple class 
+- It is used to write BL 
+- It is used for code resualbilty 
+- It is used code maintainabilty
+- It is used to connect ur backend 
+- It is used to provide isolation from ur component
+
+ng g s http 
+
+Routing
+ - navigation from one component to another component
+ - u can send parameter from one component to another component
+ 
+ 1 Configure the route 
+ 2 use <router-outlet>
+ 3 establish the link between component
+ 
+ How to integrate Bootstrap
+ 1 online
+	CDN Link => index.html => head> link 
+ 2 offline
+ 
+ 
+ 
